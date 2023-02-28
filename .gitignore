@@ -1,0 +1,35 @@
+# Logs
+logs
+*.log
+
+# Dependency directories
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Build directories
+build/
+client/build/
+server/build/
+
+# Environment variables
+.env
+client/.env
+server/.env
+
+# Compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# IDE-specific files
+.vscode/
+*.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
