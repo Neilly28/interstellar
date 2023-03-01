@@ -1,5 +1,6 @@
 import Planet from "../models/Planet.js";
 
+// create
 export const createPlanet = async (req, res, next) => {
   const newPlanet = new Planet(req.body);
 
@@ -11,6 +12,7 @@ export const createPlanet = async (req, res, next) => {
   }
 };
 
+// update
 export const updatePlanet = async (req, res, next) => {
   try {
     const updatedPlanet = await Planet.findByIdAndUpdate(req.params.id, {
@@ -23,6 +25,7 @@ export const updatePlanet = async (req, res, next) => {
   }
 };
 
+// delete
 export const deletePlanet = async (req, res, next) => {
   try {
     await Planet.findByIdAndDelete(req.params.id);
@@ -32,6 +35,7 @@ export const deletePlanet = async (req, res, next) => {
   }
 };
 
+// get planet
 export const getPlanet = async (req, res, next) => {
   try {
     const planet = await Planet.findById(req.params.id);
@@ -41,6 +45,7 @@ export const getPlanet = async (req, res, next) => {
   }
 };
 
+// get all planets
 export const getPlanets = async (req, res, next) => {
   try {
     const planets = await Planet.find();

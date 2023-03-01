@@ -5,6 +5,7 @@ import authRoute from "./routes/auth.js";
 import usersRoute from "./routes/users.js";
 import planetsRoute from "./routes/planets.js";
 import roomsRoute from "./routes/rooms.js";
+import cookieParser from "cookie-parser";
 
 const app = express();
 dotenv.config();
@@ -20,6 +21,7 @@ const connect = async () => {
 
 // middleware
 app.use(express.json());
+app.use(cookieParser());
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);
